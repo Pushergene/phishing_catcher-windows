@@ -37,12 +37,78 @@ keywords = {
     'safe': 10,
     'form': 10,
 
+# Apple iCloud
+    'appleid': 70,
+    'icloud': 60,
+    'iforgot': 60,
+    'itunes': 50,
+    'apple':30,
+
+# Email
+    'outlook': 60,
+    'office365': 50,
+    'microsoft': 60,
+    'windows': 30,
+    'protonmail': 70,
+    'tutanota': 60,
+    'hotmail': 60,
+    'gmail': 70,
+    'google': 70,
+    'outlook': 60,
+    'yahoo': 60,
+    'google': 60,
+    'yandex': 60,
+
+# Social Media
+    'twitter': 60,
+    'facebook': 60,
+    'tumblr': 60,
+    'reddit': 60,
+    'youtube': 40, # some false positives
+    'linkedin': 60,
+    'instagram': 60,
+    'flickr': 60,
+    'whatsapp': 60,
+
+# Cryptocurrency
+    'localbitcoin': 70,
+    'poloniex': 60,
+    'coinhive': 70,
+    'bithumb': 60,
+    'kraken': 50, # some false positives
+    'bitstamp': 60,
+    'bittrex': 60,
+    'blockchain': 70,
+    'bitflyer': 60,
+    'coinbase': 60,
+    'hitbtc': 60,
+    'lakebtc': 60,
+    'bitfinex': 60,
+    'bitconnect': 60,
+    'coinsbank': 60,
+
 # Bank/money
-    'paypal': 30,
-    'apple': 30,
+    'paypal': 70,
+    'moneygram': 60,
+    'westernunion': 60,
+    'bankofamerica': 60,
+    'wellsfargo': 60,
+    'citigroup': 60,
+    'santander': 60,
+    'morganstanley': 60,
+    'barclays': 50,
+    'hsbc': 50,
+    'scottrade': 60,
+    'ameritrade': 60,
+    'merilledge': 60,
+    'bank': 15,
 
 # Ecommerce
-    'amazon': 30,
+    'amazon': 60,
+    'overstock': 60,
+    'alibaba': 60,
+    'aliexpress': 60,
+    'leboncoin': 70,
 
 # Other
     'netflix': 70,

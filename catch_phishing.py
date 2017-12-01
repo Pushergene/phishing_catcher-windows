@@ -56,8 +56,7 @@ def score_domain(domain):
     if domain.startswith('*.'):
         domain = domain[2:]
         # ie. detect fake .com (ie. *.com-account-management.info)
-        if words_in_domain[0] in ['com', 'net', 'org']:
-            score += 10
+        score += 10
 
     # Testing keywords
     for word in keywords.keys():
@@ -66,11 +65,9 @@ def score_domain(domain):
 
     # Higer entropy is kind of suspicious
 
-
     # Testing Levenshtein distance for strong keywords (>= 70 points) (ie. paypol)
     for key in [k for (k,s) in keywords.items() if s >= 70]:
         # Removing too generic keywords (ie. mail.domain.com)
-        for word in [w for w in words_in_domain if w not in ['email', 'mail', 'cloud']]:
             if distance(str(word), str(key)) == 1:
                 score += 70
 

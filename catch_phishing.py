@@ -117,7 +117,7 @@ def callback(message, context):
                 tqdm.tqdm.write(
                     "[+] Potential : "
                     "{} (score={})".format(colored(domain, attrs=['underline']), score))
-            if score >= 60:
+            if score >= 75:
                 with open(log_suspicious, 'a') as f:
                     f.write("{}\n".format(domain))
                     

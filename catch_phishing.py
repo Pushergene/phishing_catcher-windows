@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 # Copyright (c) 2017 @x0rz
 #
 # This program is free software: you can redistribute it and/or modify
@@ -12,11 +12,12 @@
 import re
 import certstream
 import tqdm
+from pyentrp import entropy as ent
+import numpy as np
 from tld import get_tld
 from Levenshtein import distance
 from termcolor import colored, cprint
-from pyentrp import entropy as ent
-import numpy as np
+
 from suspicious import keywords, tlds
 
 log_suspicious = 'suspicious_domains.log'
@@ -55,7 +56,6 @@ def score_domain(domain):
     # Remove initial '*.' for wildcard certificates bug
     if domain.startswith('*.'):
         domain = domain[2:]
-        # ie. detect fake .com (ie. *.com-account-management.info)
         score += 10
 
     # Testing keywords
@@ -64,7 +64,6 @@ def score_domain(domain):
             score += keywords[word]
 
     # Higer entropy is kind of suspicious
-
     # Testing Levenshtein distance for strong keywords (>= 70 points) (ie. paypol)
     for key in [k for (k,s) in keywords.items() if s >= 70]:
         # Removing too generic keywords (ie. mail.domain.com)
@@ -114,9 +113,10 @@ def callback(message, context):
                 tqdm.tqdm.write(
                     "[+] Potential : "
                     "{} (score={})".format(colored(domain, attrs=['underline']), score))
+
             if score >= 75:
                 with open(log_suspicious, 'a') as f:
                     f.write("{}\n".format(domain))
-                    
+
 
 certstream.listen_for_events(callback)

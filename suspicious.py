@@ -1,11 +1,11 @@
 keywords = {
 # Generic suspicious
-    'login': 25,
-    'log-in': 25,
-    'sign-in': 25,
+    'login': 30,
+    'log-in': 30,
+    'sign-in': 30,
     'signin': 25,
     'account': 25,
-    'verification': 25,
+    'verification': 30,
     'verify': 25,
     'webscr': 25,
     'password': 25,
@@ -14,22 +14,19 @@ keywords = {
     'activity': 25,
     'security': 25,
     'update': 25,
-    'authentication': 25,
+    'authentication': 30,
     'authenticate': 25,
     'authorize': 25,
-    'wallet': 25,
     'alert': 25,
     'purchase': 25,
     'transaction': 25,
     'recover': 25,
     'unlock': 25,
     'confirm': 20,
-    'live': 15,
-    'office': 15,
     'service': 15,
     'manage': 15,
     'invoice': 15,
-    'secure': 10,
+    'secure': 15,
     'customer': 10,
     'client': 10,
     'bill': 10,
@@ -42,15 +39,9 @@ keywords = {
     'icloud': 60,
     'iforgot': 60,
     'itunes': 50,
-    'apple': 30,
+    'apple': 35,
 
-
-
-
-
-# Bank/money
     'paypal': 70,
-
 
 # Miscellaneous & SE tricks
     'cgi-bin': 50,
@@ -75,7 +66,5 @@ tlds = [
     '.ml',
     '.cf',
     '.tk',
-    '.xyz',
-    '.info',
-
+    '.xyz'
 ]
